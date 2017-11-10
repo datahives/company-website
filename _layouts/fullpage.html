@@ -1,16 +1,15 @@
 {% include head.html %}
-{% include header.html %}
 
-<div id="fullpage">
-  <div class="section">Some section</div>
-  <div class="section">Some section</div>
-  <div class="section">Some section</div>
-  <div class="section">Some section</div>
-</div>
+{{ content }}
 
+<script src="http://vjs.zencdn.net/6.2.8/video.js"></script>
 <script>
   $(document).ready(function(){
-    $('#fullpage').fullpage();
+    $('#fullpage').fullpage({
+      responsiveWidth: 768,
+      afterResponsive: function(isResponsive){},
+      navigation: true,
+    });
   });
 </script>
 
